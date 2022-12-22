@@ -1,0 +1,251 @@
+.faq {
+  padding: 0.75rem 1rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+
+  &[open] {
+    border-bottom: 4px solid #229521;
+
+    summary {
+      margin-bottom: 0.75rem;
+
+      &::after {
+        content: '-';
+      }
+    }
+  }
+
+  summary {
+    color: var(--heading-color);
+    position: relative;
+    cursor: pointer;
+    list-style-type: none;
+    padding-right: 3rem;
+
+    @include for-size(large) {
+      font-size: 1.25rem;
+    }
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      font-size: 1.25rem;
+      font-weight: 900;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  p {
+    color: #B4B2C7;
+    font-size: 0.875rem;
+    line-height: 150%;
+    padding-right: 3rem;
+
+    @include for-size(large) {
+      font-size: 1rem;
+    }
+  }
+
+  &-container {
+    --primary-bg-color: #14142B;
+    --secondary-bg-color: #333142;
+    --primary-color: #229521;
+    --heading-color: #FAFBFC;
+
+    color: #fff;
+    overflow: hidden;
+  }
+
+  &-left-section {
+    position: relative;
+    background-color: var(--primary-bg-color);
+    padding: 1rem;
+    overflow: hidden;
+
+    @include for-size(medium) {
+      /* Had to use extra top padding because of collapsing margins due to spacing out my component sections. */
+      padding: 3.75rem 17rem 2rem 2rem;
+
+      &::before {
+        content: '';
+        background-color: var(--secondary-bg-color);
+        width: 12rem;
+        height: 10.375rem;
+        position: absolute;
+        bottom: 0;
+        right: 0.25rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -4.3rem;
+        width: 19.5rem;
+        height: 21.375rem;
+        background-image: url('../img/plant.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    @include for-size(large) {
+      padding: 3.75rem 27.5rem 2rem 2rem;
+
+      &::before {
+        width: 17.8125rem;
+        height: 15.5rem;
+        right: 0;
+      }
+
+      &::after {
+        right: -8rem;
+        width: 29.375rem;
+        height: 32.125rem;
+      }
+    }
+
+    @include for-size("2x-large") {
+      padding: 6.5rem 47.125rem 6.5rem 20rem;
+
+      &::before {
+        width: 20rem;
+        height: 24.25rem;
+      }
+
+      &::after {
+        right: -13rem;
+        width: 43rem;
+        height: 43rem;
+      }
+    }
+  }
+
+  &-preheading {
+    color: var(--primary-color);
+    font-size: 0.8125rem;
+    letter-spacing: 0.1rem;
+
+    @include for-size(large) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &-heading {
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.25rem 0 2.5rem 0;
+
+    @include for-size(large) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &-right-section {
+    position: relative;
+    padding: 2.5rem 1rem;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+
+    @include for-size(medium) {
+      padding: 4.0625rem 2rem;
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+      margin-right: 12.25rem;
+    }
+
+    @include for-size(large) {
+      padding: 5.3125rem 2.5rem 2.375rem 2.5rem;
+      gap: 5rem;
+      margin-right: 17.8125rem;
+    }
+
+    @include for-size("2x-large") {
+      padding: 8.5rem 2.5rem 9rem 20rem;
+      justify-content: space-between;
+      margin-right: 20rem;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        box-shadow: 0 0 15rem 15rem #fff;
+        opacity: 10%;
+      }
+
+      &::before {
+        bottom: 0;
+        left: 15%;
+      }
+
+      &::after {
+        top: 0;
+        right: 8%;
+      }
+    }
+
+    .faq-heading {
+      margin-bottom: 1rem;
+    }
+
+    .content-container {
+      margin-bottom: 2.5rem;
+
+      @include for-size(medium) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-content {
+    color: #F1F1F4;
+    font-size: 0.875rem;
+    line-height: 150%;
+
+    @include for-size(large) {
+      font-size: 1rem;
+    }
+  }
+
+  &-cta-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 150%;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--primary-color);
+    width: 8.75rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin-right: 2rem;
+
+    @include for-size(medium) {
+      align-self: unset;
+    }
+
+    @include for-size("2x-large") {
+      width: 12.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.statistic {
+  --heading-size: 1.9375rem;
+  --primary-color: #1F861D;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.75rem 1rem;
+
+  @include for-size(medium) {
+    padding: 3.75rem 2rem;
+  }
+
+  @include for-size(large) {
+    --heading-size: 2.4375rem;
+    padding: 3.75rem 2.5rem;
+  }
+
+  @include for-size(large) {
+    --heading-size: 3.0625rem;
+    padding: 3.75rem 2.5rem;
+  }
+
+  &-container {
+    background-color: #FAFBFC;
+  }
+
+  &-preheading {
+    color: var(--primary-color);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.25rem;
+
+    @include for-size(large) {
+      font-size: 1rem;
+    }
+
+    @include for-size(x-large) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &-heading {
+    color: #1A1A1A;
+    font-size: var(--heading-size);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &-subheading {
+    color: #333142;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+
+    @include for-size(medium) {
+      max-width: 75%;
+    }
+
+    @include for-size(large) {
+      max-width: 55%;
+    }
+
+    @include for-size(x-large) {
+      max-width: 38%;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @include for-size(x-large) {
+      width: 80rem;
+    }
+  }
+
+  &-card {
+    background-color: #fff;
+    border: 1px solid #DAD9E3;
+    border-radius: 12px;
+    box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(50% - 0.625rem);
+    padding: 1.5rem;
+    text-align: center;
+
+    @include for-size(medium) {
+      flex-basis: calc(25% - 0.625rem);
+    }
+
+    &--selected {
+      border: 2px solid var(--primary-color);
+
+      @include for-size(large) {
+        border: 4px solid var(--primary-color);
+      }
+    }
+
+    &>picture {
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      padding: 0.5rem;
+
+      @include for-size(medium) {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.6rem;
+      }
+
+      @include for-size(large) {
+        width: 3.75rem;
+        height: 3.75rem;
+        padding: 0.8rem;
+      }
+
+      @include for-size(x-large) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    &-heading {
+      color: #1A1A1A;
+      font-size: var(--heading-size);
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+    }
+
+    &-content {
+      color: #333142;
+      font-size: 0.875rem;
+
+      @include for-size(large) {
+        font-size: 1rem;
+      }
+
+      @include for-size(large) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

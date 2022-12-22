@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Tests</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./scss/styles.scss" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+
+    <!-- Statistic Component -->
+    <section class="statistic-container">
+      <div class="container centered">
+        <div class="statistic">
+          <span class="statistic-preheading">STATISTIC</span>
+          <h2 class="statistic-heading">Why Choose Us?</h2>
+          <p class="statistic-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+          <!-- Lists are generally better for assistive technology, however these could also just be divs as well. -->
+          <ul class="statistic-cards">
+            <li class="statistic-card">
+              <picture class="statistic-card_icon">
+                <!-- Empty alt tag will hide image from screen readers. Since this image is decorative, it can be hidden. -->
+                <img src="./img/people.svg" alt="" />
+              </picture>
+              <h3 class="statistic-card-heading">263</h3>
+              <p class="statistic-card-content">Happy families.</p>
+            </li>
+            <!-- Wasn't sure if this card was supposed to be highlighted on hover, click, etc. but I made it like in the design. -->
+            <li class="statistic-card statistic-card--selected">
+              <picture class="statistic-card_icon">
+                <img src="./img/receipt-2.svg" alt="" />
+              </picture>
+              <h3 class="statistic-card-heading">18</h3>
+              <p class="statistic-card-content">Happy families.</p>
+            </li>
+            <li class="statistic-card">
+              <picture class="statistic-card_icon">
+                <img src="./img/scissor.svg" alt="" />
+              </picture>
+              <h3 class="statistic-card-heading">24B</h3>
+              <p class="statistic-card-content">Happy families.</p>
+            </li>
+            <li class="statistic-card">
+              <picture class="statistic-card_icon">
+                <img src="./img/house.svg" alt="" />
+              </picture>
+              <h3 class="statistic-card-heading">3</h3>
+              <p class="statistic-card-content">Happy families.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Statistic Component -->
+
+
+
+    <!-- About Us Component -->
+
+    <section class="about-us-container">
+      <div class="container centered">
+        <div class="about-us">
+          <div class="about-us-left-section">
+            <picture>
+              <img src="./img/cleaning-person.png" alt="Woman wearing medical mask and holding cleaning supplies" />
+            </picture>
+            <div class="about-us-experience">
+              <p>12</p>
+              <p>Year's <br /> Experience</p>
+            </div>
+          </div>
+          <div class="about-us-right-section">
+            <p class="about-us-preheading">ABOUT US</p>
+            <h2 class="about-us-heading">We Provide Best Cleaning Service Provider</h2>
+            <div class="about-us-content">
+              <p>Our mission is not only to meet your expectations but to exceed them, we also provide many more like
+                condos
+                and apartment cleaning. Our unique 22-Step Healthy Touch Deep Cleaning System will ensure you'll receive
+                a
+                healthy, thorough housecleaning with every visit. We use cleaning products that are friendly to the
+                environment.</p>
+              <ul>
+                <li>Praesent feugiat sem mattis.</li>
+                <li>Premium services beyond you.</li>
+                <li>A wonderful serenity.</li>
+                <li>Set a link back to this photo.</li>
+              </ul>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End About Us Component -->
+
+
+    <!-- FAQ Component -->
+    <section class="faq-container">
+      <div class="faq-left-section">
+        <div class="container centered">
+          <span class="faq-preheading">FAQ</span>
+          <h2 class="faq-heading">Frequently Asked Questions</h2>
+          <!-- Used details component here for fun and a no JS solution. JS would work just as well though. -->
+          <details class="faq" open>
+            <summary>
+              Can I cancel my Essentials or Premium plan subscription at any time?
+            </summary>
+            <p>You can pay with a credit card or via net banking (if you're in United States).</p>
+          </details>
+          <details class="faq">
+            <summary>
+              Can I cancel my Essentials or Premium plan subscription at any time?
+            </summary>
+            <p>You can pay with a credit card or via net banking (if you're in United States).</p>
+          </details>
+          <details class="faq">
+            <summary>
+              We need to add new users to our team. How will that be billed?
+            </summary>
+            <p>You can pay with a credit card or via net banking (if you're in United States).</p>
+          </details>
+          <details class="faq">
+            <summary>
+              My team wants to cancel its subscription. How do we do that? Can we get a refund?
+            </summary>
+            <p>You can pay with a credit card or via net banking (if you're in United States).</p>
+          </details>
+          <details class="faq">
+            <summary>
+              Do you offer discounts for non-profit organizations or educational institutions.
+            </summary>
+            <p>You can pay with a credit card or via net banking (if you're in United States).</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-right-section">
+        <div class="content-container">
+          <span class="faq-preheading">GET QUOTE</span>
+          <h2 class="faq-heading">Start Your Renovation Today</h2>
+          <p class="faq-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <a href="#" class="faq-cta-button">
+          <img src="./img/arrow-right.svg" alt="" />
+          Discover <br /> More
+        </a>
+      </div>
+    </section>
+    <!-- End FAQ Component -->
+
+  </main>
+</body>
+
+</html>

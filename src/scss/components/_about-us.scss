@@ -1,0 +1,195 @@
+.about-us {
+  --primary-color: #007CFB;
+  --secondary-color: #FF9900;
+  --accent-color: #A36814;
+  padding: 0 1rem;
+
+  @include for-size(medium) {
+    padding: 0 5.75rem;
+  }
+
+  @include for-size(large) {
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5.625rem;
+  }
+
+  @include for-size(x-large) {
+    padding: 0 8rem;
+    gap: 8rem;
+  }
+
+  &-left-section {
+    flex-basis: 50%;
+    position: relative;
+    margin-bottom: 3.125rem;
+
+    @include for-size(large) {
+      margin-bottom: 0;
+    }
+
+    >picture {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+        width: 4.375rem;
+        aspect-ratio: 1/1;
+        z-index: -1;
+        transform: translateX(-50%);
+
+        @include for-size(medium) {
+          width: 9.375rem;
+          transform: translateX(-35%);
+        }
+
+        @include for-size(large) {
+          width: 4.75rem;
+          transform: translateX(-80%);
+        }
+
+        @include for-size(x-large) {
+          width: 9.375rem;
+          transform: translateX(-35%);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        width: 3.5rem;
+        aspect-ratio: 1/1;
+        transform: translate(35%, -40%);
+
+        @include for-size(medium) {
+          width: 7.5rem;
+          transform: translate(10%, -55%);
+        }
+
+        @include for-size(large) {
+          width: 4.75rem;
+        }
+
+        @include for-size(x-large) {
+          width: 7.5rem;
+        }
+      }
+    }
+  }
+
+  &-right-section {
+    flex-basis: 50%;
+  }
+
+  &-experience {
+    width: 7.375rem;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 6px solid #F7F7F7;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+
+    @include for-size(medium) {
+      width: 13.4375rem;
+      border: 10px solid #F7F7F7;
+    }
+
+    @include for-size(large) {
+      width: 9.875rem;
+      border: 7.5px solid #F7F7F7;
+    }
+
+    @include for-size(x-large) {
+      width: 15.75rem;
+      border: 12px solid #F7F7F7;
+      transform: translate(10%, 10%);
+    }
+
+    p {
+      &:nth-child(1) {
+        font-size: 2.375rem;
+        font-weight: 900;
+
+        @include for-size(x-large) {
+          font-size: 3.75rem;
+        }
+      }
+
+      &:nth-child(2) {
+        font-size: 0.875rem;
+
+        @include for-size(medium) {
+          font-size: 1.125rem;
+        }
+
+        @include for-size(x-large) {
+          font-size: 1.625rem;
+        }
+      }
+    }
+  }
+
+  &-preheading {
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-heading {
+    color: #1A1A1A;
+    font-size: 1.9375rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+
+    @include for-size(large) {
+      font-size: 2.4375rem;
+    }
+
+    @include for-size(x-large) {
+      font-size: 3.125rem;
+    }
+  }
+
+  &-content {
+    color: #4E4B66;
+    line-height: 150%;
+
+    ul {
+      margin-bottom: 1.75rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      display: inline-block;
+      background-color: var(--primary-color);
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 3.5rem;
+      border-radius: 8px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+
+  &.centered {
+    margin: 0 auto;
+  }
+
+  @include for-size(small) {
+    $width: map.get($breakpoints, small);
+    max-width: #{$width}rem;
+  }
+
+  @include for-size(medium) {
+    $width: map.get($breakpoints, medium);
+    max-width: #{$width}rem;
+  }
+
+  @include for-size(large) {
+    $width: map.get($breakpoints, large);
+    max-width: #{$width}rem;
+  }
+
+  @include for-size(x-large) {
+    $width: map.get($breakpoints, x-large);
+    max-width: #{$width}rem;
+  }
+
+  @include for-size("2x-large") {
+    $width: map.get($breakpoints, "2x-large");
+    max-width: #{$width}rem;
+  }
+}
+
+section {
+  margin: 50vh 0;
+}

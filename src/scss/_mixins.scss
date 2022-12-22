@@ -1,0 +1,15 @@
+$breakpoints: (
+  "small": calc(640 / 16),
+  "medium": calc(768 / 16),
+  "large": calc(1024 / 16),
+  "x-large": calc(1280 / 16),
+  "2x-large": calc(1536 / 16)
+);
+
+@mixin for-size($size) {
+  $width: map.get($breakpoints, $size);
+
+  @media screen and (min-width: #{$width}rem) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+@use "sass:map";
+
+@import '_mixins';
+@import '_reset';
+@import '_general';
+
+/* Components */
+@import './components/statistic';
+@import './components/about-us';
+@import './components/faq';
